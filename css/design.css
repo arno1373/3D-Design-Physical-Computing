@@ -1,0 +1,616 @@
+@font-face {
+    font-family: SourceSerifVF;
+    src: url(../fonts/SourceSerifVariable-Roman.ttf);
+    /*weight axis (200–900)*/
+}
+
+@font-face {
+    font-family: SourceSerifVF-italic;
+    src: url(../fonts/SourceSerifVariable-Italic.ttf);
+    /*weight axis (200–900)*/
+}
+
+@font-face {
+    font-family: SourceSansVF;
+    src: url(../fonts/SourceSansVariable-Roman.ttf);
+    /*weight axis (200–900)*/
+}
+
+@font-face {
+    font-family: SourceSansVF-italic;
+    src: url(../fonts/SourceSansVariable-Italic.ttf);
+    /*weight axis (200–900)*/
+}
+
+@font-face {
+    font-family: SourceCodeVF;
+    src: url(../fonts/SourceCodeVariable-Roman.ttf);
+    /*weight axis (200–900)*/
+}
+
+@font-face {
+    font-family: SourceCodeVF-italic;
+    src: url(../fonts/SourceCodeVariable-Italic.ttf);
+    /*weight axis (200–900)*/
+}
+
+/*HTML tags*/
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+body {
+    padding: 22px;
+    padding-right: 25px;
+    padding-left: 0px;
+    height: 100%;
+    margin: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    font-family: "Space Mono", SourceCodeVF, monospace;
+    font-size: 3em;
+    line-height: 0.9em;
+    margin: 0;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    font-variation-settings: "wght"780;
+}
+
+h2 {
+    font-family: SourceCodeVF, monospace;
+    font-size: .8em;
+    line-height: 1em;
+    padding-bottom: 3px;
+    padding-top: 12px;
+    margin: 0;
+    font-variation-settings: "wght"650;
+    font-feature-settings: "smcp";
+    letter-spacing: .14em;
+}
+
+h3 {
+    font-family: SourceCodeVF, monospace;
+    font-size: .8em;
+    line-height: 1.7em;
+    margin: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-variation-settings: "wght"280;
+}
+
+h4 {
+    font-family: SourceCodeVF, monospace;
+    font-size: 1.6em;
+    line-height: 1em;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    font-variation-settings: "wght"650;
+    font-feature-settings: "smcp";
+    letter-spacing: .09em;
+}
+
+h5 {
+    font-family: SourceCodeVF, monospace;
+    font-size: 1.6em;
+    line-height: 1em;
+    margin: 0;
+    padding-bottom: 8px;
+    padding-top: 25px;
+    font-variation-settings: "wght"200;
+    font-feature-settings: "smcp";
+    letter-spacing: .07em;
+}
+
+h6 {
+    font-family: SourceSansVF, monospace;
+    font-size: .8em;
+    line-height: 1.5em;
+    margin: 0;
+    padding-top: 9px;
+    padding-bottom: 0px;
+    font-variation-settings: "wght"320;
+}
+
+/* ^ footnotes text */
+
+h7 {
+    font-family: SourceCodeVF, monospace;
+    font-size: .9em;
+    line-height: 1.7em;
+    margin: 0;
+    text-align: left;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    hyphens: manual;
+    hyphenate-limit-chars: 10 4 4;
+    font-variation-settings: "wght"400;
+}
+
+h8 {
+    font-family: SourceCodeVF, monospace;
+    font-size: .9em;
+    line-height: 1.7em;
+    margin: 0;
+    text-align: left;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    hyphens: manual;
+    hyphenate-limit-chars: 10 4 4;
+    font-variation-settings: "wght"280;
+}
+
+/* ^ subtitles within sections (i.e: 'legacy') */
+
+ol {
+    font-family: SourceCodeVF, monospace;
+    font-size: .8em;
+    line-height: 2em;
+    margin: 0;
+    padding-left: 0px;
+    text-align: left;
+    font-variation-settings: "wght"310;
+}
+
+ul {
+    font-family: SourceSansVF, monospace;
+    font-size: .9em;
+    line-height: 1.6em;
+    margin: 0;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    hyphens: manual;
+    hyphenate-limit-chars: 10 4 4;
+    font-variation-settings: "wght"280;
+}
+
+/* ^ for contents text */
+
+blockquote {
+    font-family: SourceSerifVF, serif;
+    font-size: 1em;
+    line-height: 1.7em;
+    padding-left: 2em;
+    padding-top: 0px;
+    padding-bottom: 1px;
+    margin: 0;
+    hyphens: manual;
+    hyphenate-limit-chars: 10 4 4;
+    text-align: left;
+    font-variation-settings: "wght"270;
+}
+
+p {
+    font-family: SourceSerifVF, serif;
+    font-size: 1em;
+    line-height: 1.9em;
+    margin: 0;
+    text-align: left;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    hyphens: manual;
+    hyphenate-limit-chars: 10 4 4;
+    font-variation-settings: "wght"600;
+}
+
+p+p {
+    /* text-indent: 1.5em; */
+    padding-top: 1.5em;
+}
+
+h5+p {
+    /* text-indent: 1.5em; */
+    padding-top: 1em;
+}
+
+.monoitalic+p {
+    text-indent: 1.5em;
+    padding-top: 1em;
+}
+
+/*classes*/
+
+.smcp {
+    font-feature-settings: "c2sc";
+    letter-spacing: .04em;
+}
+
+.sanssmcp {
+    font-feature-settings: "c2sc";
+    letter-spacing: .04em;
+}
+
+.sanssemismcp {
+    font-family: SourceSansVF, serif;
+    font-size: .9em;
+    letter-spacing: .07em;
+}
+
+.osf {
+    font-feature-settings: "onum";
+}
+
+.sansosf {
+    font-family: SourceSansVF, serif;
+    font-feature-settings: "onum";
+}
+
+.italic {
+    font-family: SourceSerifVF-italic, serif;
+}
+
+.sansitalic {
+    font-family: SourceSansVF-italic, serif;
+}
+
+.monoitalic {
+    font-family: SourceCodeVF-italic, monospace;
+    display: inline-block;
+    font-size: 0.9em;
+    line-height: 2em;
+    margin: 0;
+    padding-left: 0px;
+    text-align: left;
+    font-variation-settings: "wght"400;
+}
+
+.footnotes {
+    font-family: SourceSerifVF, serif;
+    font-feature-settings: "sups";
+}
+
+.sansfootnotes {
+    font-family: SourceSansVF, sans-serif;
+    font-feature-settings: "sups";
+}
+
+.contentsfigs {
+    font-family: SourceCodeVF, monospace;
+    font-variation-settings: "wght"470;
+}
+
+.footnotesfigs {
+    font-family: SourceCodeVF, monospace;
+    font-variation-settings: "wght"470;
+}
+
+.indent {
+    padding-left: .8em;
+}
+
+.doubleindent {
+    padding-left: 2.3em;
+}
+
+.break {
+    word-break: break-all;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 30px;
+    column-width: 100%;
+}
+
+/* target mobile first (default = small devices) */
+
+[class*="col"] {
+    grid-column-end: span 12;
+}
+
+/* target mobile screens under 600px */
+
+@media only screen and (max-width: 600px) {
+    .padded {
+        padding: 5px 0px;
+    }
+
+    .twothird {
+        grid-column-end: span 5;
+        padding: 0 20px;
+        padding-right: 0px;
+    }
+
+    .grid {
+        grid-gap: 60px;
+    }
+
+    p {
+        font-size: .8em;
+        line-height: 1.9em;
+        font-variation-settings: "wght"330;
+    }
+
+    h1 {
+        font-size: 3.6em;
+        line-height: 1em;
+        padding-bottom: 3px;
+    }
+
+    h2 {
+        font-size: 1em;
+        line-height: 1.5em;
+        padding-bottom: 0px;
+        padding-top: 12px;
+    }
+
+    h3 {
+        font-size: 1em;
+        line-height: 1.5em;
+        /*        padding-right: 0px;*/
+    }
+
+    h4 {
+        font-size: 1.2em;
+        line-height: 1em;
+        margin: 0;
+        padding-top: 55px;
+        padding-bottom: 0px;
+    }
+
+    h5 {
+        font-size: 1.2em;
+        line-height: 1em;
+        margin: 0;
+        padding-top: 30px;
+        padding-bottom: 7px;
+    }
+
+    h6 {
+        font-size: .7em;
+        line-height: 1.6em;
+        margin: 0;
+        padding-top: 9px;
+    }
+
+    ol {
+        font-size: 1em;
+        line-height: 1.8em;
+    }
+
+    blockquote {
+        font-size: .8em;
+        line-height: 1.9em;
+        padding-left: .9em;
+    }
+
+    .sm1 {
+        grid-column-end: span 12;
+    }
+
+    .sm2 {
+        grid-column-end: span 6;
+        grid-column-start: 1;
+        padding: 0 20px;
+        padding-right: 0px;
+        column-count: 1;
+    }
+
+    .sm3 {
+        grid-column-end: span 4;
+    }
+
+    .sm4 {
+        grid-column-end: span 3;
+    }
+
+    .sm6 {
+        grid-column-end: span 2;
+    }
+
+    .sm12 {
+        grid-column-end: span 1;
+    }
+}
+
+/* target tablet/mid-size screens between 601–1024px */
+
+@media only screen and (min-width: 601px) {
+    .padded {
+        padding: 25px 0px;
+    }
+
+    .twothird {
+        grid-column-end: span 3;
+        padding: 0 20px;
+        padding-right: 0px;
+    }
+
+    .grid {
+        grid-gap: 60px;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.7em;
+        font-variation-settings: "wght"350;
+    }
+
+    h1 {
+        font-size: 1.7em;
+        line-height: 1em;
+        padding-bottom: 3px;
+    }
+
+    h2 {
+        font-size: .7em;
+        line-height: 1em;
+        padding-bottom: 3px;
+        padding-top: 9px;
+    }
+
+    h3 {
+        font-size: .7em;
+        line-height: 1.5em;
+        /*        padding-right: 0px;*/
+    }
+
+    h4 {
+        font-size: 1.4em;
+        line-height: 1em;
+        margin: 0;
+        padding-top: 55px;
+        padding-bottom: 0px;
+    }
+
+    h5 {
+        font-size: 1.4em;
+        line-height: 1em;
+        margin: 0;
+        padding-top: 30px;
+        padding-bottom: 7px;
+    }
+
+    ol {
+        font-size: .7em;
+        line-height: 2em;
+    }
+
+    blockquote {
+        font-size: 1em;
+        line-height: 1.7em;
+        padding-left: 2em;
+    }
+
+    .md1 {
+        grid-column-end: span 12;
+    }
+
+    .md2 {
+        grid-column-end: span 6;
+    }
+
+    .md3 {
+        grid-column-end: span 7;
+        grid-column-start: 4;
+        column-count: 1;
+    }
+
+    .md4 {
+        grid-column-end: span 3;
+    }
+
+    .md6 {
+        grid-column-end: span 2;
+    }
+
+    .md12 {
+        grid-column-end: span 1;
+    }
+}
+
+/* target desktop screens over 1024px */
+
+@media only screen and (min-width: 1025px) {
+    h3 {
+        font-size: .8em;
+        line-height: 1.7em;
+        padding-right: 20px;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.7em;
+        font-variation-settings: "wght"400;
+    }
+
+    h1 {
+        font-size: 3em;
+        line-height: .9em;
+        padding-bottom: 8px;
+    }
+
+    h2 {
+        font-size: .8em;
+        line-height: 1em;
+        padding-bottom: 3px;
+        padding-top: 12px;
+    }
+
+    h4 {
+        font-size: 1.6em;
+        line-height: 1em;
+        margin: 0;
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+
+    h5 {
+        font-size: 1.6em;
+        line-height: 1em;
+        margin: 0;
+        padding-top: 25px;
+        padding-bottom: 8px;
+    }
+
+    ol {
+        font-size: .8em;
+        line-height: 2em;
+    }
+
+    blockquote {
+        font-size: 1em;
+        line-height: 1.7em;
+        padding-left: 2em;
+    }
+
+    .padded {
+        padding: 25px 0px;
+    }
+
+    .twothird {
+        grid-column-end: span 3;
+        padding: 0 20px;
+        padding-right: 25px;
+    }
+
+    .grid {
+        grid-gap: 20px;
+    }
+
+    .col1 {
+        grid-column-end: span 12;
+    }
+
+    .col2 {
+        grid-column-end: span 6;
+    }
+
+    .col3 {
+        grid-column-end: span 5;
+        grid-column-start: 4;
+        column-count: 1;
+    }
+
+    .col4 {
+        grid-column-end: span 3;
+    }
+
+    .col6 {
+        grid-column-end: span 2;
+    }
+
+    .col12 {
+        grid-column-end: span 1;
+    }
+}
+
+/*NOTES
+
+• My goal in this exercise is to work with VFs to establish a design space that is richer in organization and hierarchy – which enables an easier to navigate and read text – that is not possible with static web fonts.
+
+• I also wish to utilize the VFs to use the concept of 'grades' – values of typographic texture – to differentiate the information in the layout (using weight values). I am hypothesizing that this can make for a better document layout from an organizational perspective, reading, and ability to comfortably guide a viewer's eyes around the doc. Subtler changes in emphasis and areas for the viewer to follow = less abruptness and anxiety?
+
+• Varying the weight axis throughout the responsive designspace to accommodate the changes in size/scale for better reading in each environment?
+
+*/
